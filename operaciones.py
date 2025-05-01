@@ -10,11 +10,11 @@ def multiplicacion(a, b):
     """Multiplica dos números."""
     return a * b
 
-def division(a, b):
+def division_piso(a, b):
     """Divide el primer número por el segundo. Maneja división por cero."""
     if b == 0:
         return "Error: División por cero"
-    return a / b
+    return a // b
 
 def modulo(a, b):
     """Calcula el residuo de la división entre dos números."""

@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask,render_template, request
 from livereload import Server
 from operaciones import suma
 from operaciones import division_piso
@@ -8,11 +8,7 @@ app=Flask(__name__)
 def home():
 
 
-    return '''
-PAGINA DE INICIO DE LA APLICACION DE LOS NUEVOS PROGRAMADORES
-<a href="/suma?numero1=20&numero2=30"> ir a la pagina de suma </a>
-<a href="/division_piso?numero1=20&numero2=30">Ir a la pagina de division piso </a>
-'''
+    return render_template("index.html")
 
 @app.route("/suma")
 def ruta_suma():
